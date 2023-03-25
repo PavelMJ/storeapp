@@ -16,6 +16,8 @@ function App() {
 		{ id: 6, type: 'רמקול', model: 'HomePod mini', price: 554, image: './img/HomePodMini.jpg', checked: false }
 
 	])
+
+	const [serchValue, setSearchValue]=useState('')
 	const [openCart, setOpenCart] = useState(false)
 	const onCart = () => {
 		setOpenCart(!openCart)
@@ -65,11 +67,13 @@ useEffect(()=>{
 
 
 
+
+
 	return (
 		<div className="App">
 			{toCart()}
 			<div className='conteiner'>
-				<Header onCart={onCart} />
+				<Header onCart={onCart} setSearchValue = {setSearchValue} serchValue={serchValue}/>
 				<Banner />
 				<div className='products'>
 					{cards.map((product, index) => {
