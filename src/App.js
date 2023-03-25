@@ -8,22 +8,8 @@ import axios from 'axios';
 
 
 function App() {
-<<<<<<< HEAD
-	const [cards, setCards] = useState([
-		{ id: 1, type: 'מקלדת', model: 'Apple Magic', price: 460, image: './img/mackeys.jpg', checked: false },
-		{ id: 2, type: 'משקפי VR', model: 'Oculus Rift 2', price: 1500, image: './img/OculusRift2.jpg', checked: false },
-		{ id: 3, type: 'אוזניות', model: 'Sony mx 1000', price: 920, image: './img/ear-phones.jpg', checked: false },
-		{ id: 4, type: 'רכפן ', model: 'DJI mini 3', price: 3500, image: './img/dron.jpg', checked: false },
-		{ id: 5, type: 'בקר משחק', model: 'Xbox controller', price: 380, image: './img/Xbox_one_Controler.jpg', checked: false },
-		{ id: 6, type: 'רמקול', model: 'HomePod mini', price: 554, image: './img/HomePodMini.jpg', checked: false }
-
-	])
-
-	const [serchValue, setSearchValue]=useState('')
-=======
 	const [cards, setCards] = useState([])
 	const [searchValue, setSearchValue] = useState('')
->>>>>>> b8639afb31f6476c3f550b8509b4c594b39bb762
 	const [openCart, setOpenCart] = useState(false)
 	const onCart = () => {
 		setOpenCart(!openCart)
