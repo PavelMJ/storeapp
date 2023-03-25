@@ -318,6 +318,49 @@
 	align-items: center;
 	margin: auto 80px auto 0;
 
+	.search{
+		width: 100%;
+		display: flex;
+		justify-content: right;
+		margin: auto;
+	}
+
+	.inpt{
+		position: relative;
+		width: 270px;
+		height: 29px;
+		font-size: 18px;
+		margin: 0 5px;
+	}
+
+	.srchBtn{
+		height: 35px;
+		width: 70px;
+		font-size: 16px;
+	}
+
+	.clearBtn{
+		cursor: pointer;
+		position: relative;
+		right: 50px;
+		margin: 0;
+	}
+
+	.productTitle{
+		width: 100%;
+		color: white;
+		font-size: 30px;
+		margin: 0 5px;
+
+	}
+
+	.infobar{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+	}
+
 
 
 }

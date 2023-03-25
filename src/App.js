@@ -4,9 +4,11 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Icart from './components/Icart';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 function App() {
+<<<<<<< HEAD
 	const [cards, setCards] = useState([
 		{ id: 1, type: 'מקלדת', model: 'Apple Magic', price: 460, image: './img/mackeys.jpg', checked: false },
 		{ id: 2, type: 'משקפי VR', model: 'Oculus Rift 2', price: 1500, image: './img/OculusRift2.jpg', checked: false },
@@ -18,13 +20,25 @@ function App() {
 	])
 
 	const [serchValue, setSearchValue]=useState('')
+=======
+	const [cards, setCards] = useState([])
+	const [searchValue, setSearchValue] = useState('')
+>>>>>>> b8639afb31f6476c3f550b8509b4c594b39bb762
 	const [openCart, setOpenCart] = useState(false)
 	const onCart = () => {
 		setOpenCart(!openCart)
 	}
 
 	const [icart, setIcart] = useState([])
-	const[count,setCount]=useState(0)
+	const [count, setCount] = useState(0)
+
+
+	useEffect(()=>{
+		axios.get('/data.json').then(res=>{
+			setCards(res.data);
+		})
+
+	},[])
 
 
 	const addToCart = (item, index) => {
@@ -52,11 +66,13 @@ function App() {
 
 
 
-useEffect(()=>{
-	setCount(icart.reduce((ac,val)=>ac+val.price, (0)))
-},[icart])
+	useEffect(() => {
+		setCount(icart.reduce((ac, val) => ac + val.price, (0)))
+		// axios.post('./data/cart.json', icart[icart.length-1])
 
-	
+	}, [icart])
+
+
 
 	const toCart = () => {
 		if (openCart === true) return <Icart icart={icart} onCart={onCart} remove={removeItem} count={count} />
@@ -75,8 +91,19 @@ useEffect(()=>{
 			<div className='conteiner'>
 				<Header onCart={onCart} setSearchValue = {setSearchValue} serchValue={serchValue}/>
 				<Banner />
+				<div className='infobar'>
+					<div className='productTitle'>{searchValue ? `${searchValue} חיפוש לפי ` : "כל המוצרים"}</div>
+					<div className='search '>
+						<input className='inpt' onChange={(event) => {
+							setSearchValue(event.target.value)
+						}} value={searchValue} type="text" />
+						<img src="/img/loopa.svg" alt="" />
+						{searchValue && <img className='clearBtn' onClick={() => { setSearchValue('') }} src="/img/ClearButton.svg" alt="clearbtn" />}
+					</div>
+				</div>
 				<div className='products'>
-					{cards.map((product, index) => {
+					{cards.filter((item)=>item.model.toLowerCase().includes(searchValue))
+					.map((product, index) => {
 						return <Card
 							product={product}
 							key={index}
