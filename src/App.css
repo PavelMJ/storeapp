@@ -2,9 +2,9 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
-	background-image: url('./img/lightbolb-back.png');
-	background-size: cover;
+	height:100%;
+	background-image: url('./img/lightbolb-back.png') ;
+	background-size:cover ;
 }
 
 .conteiner {
@@ -82,12 +82,12 @@
 
 }
 
-.card:hover {
-	box-shadow: 2px 2px 12px rgb(51, 51, 51);
+.card:hover{
+	box-shadow: 2px 2px 12px rgb(51, 51, 51) ;
 	transform: translateY(-3px);
 }
 
-.item {
+.item{
 	cursor: pointer;
 	display: flex;
 	flex-flow: row;
@@ -101,8 +101,8 @@
 	transition: all 0.2s ease;
 }
 
-.item:hover {
-	box-shadow: 2px 2px 12px rgb(51, 51, 51);
+.item:hover{
+	box-shadow: 2px 2px 12px rgb(51, 51, 51) ;
 	transform: translateY(-2px);
 	transform: translateX(2px);
 }
@@ -117,7 +117,7 @@
 	bottom: 47px;
 }
 
-.picked {
+.picked{
 	position: relative;
 	width: 55%;
 	height: 100%;
@@ -139,28 +139,28 @@
 }
 
 
-.plus:hover {
+.plus:hover{
 	width: 48px;
 }
 
 .info {
 	position: relative;
 	display: flex;
-	flex-flow: row;
+	flex-flow:row;
 	justify-content: space-between;
 	margin: 20px 0;
 	bottom: 55px;
 	font-size: 20px;
 }
 
-.itemInfo {
+.itemInfo{
 	position: static;
 	text-align: right;
 	display: flex;
 	align-items: right;
 	justify-content: center;
-	flex-flow: column;
-	top: 12px;
+	flex-flow:column;
+	top:12px;
 	margin: 5px;
 }
 
@@ -170,20 +170,20 @@
 	width: 150px;
 	height: 40px;
 	position: relative;
-	color: aliceblue;
+	color:aliceblue;
 	background: #8C65C5;
 	border-radius: 13px;
 	bottom: 68px;
-	left: 55px;
+	left:55px;
 
 	border: none;
-	font-size: 26px;
+	font-size:26px ;
 	transition: all 0.2s ease;
 
 }
 
 
-.buybtn:hover {
+.buybtn:hover{
 	background-color: #b36fd1;
 	box-shadow: 0px 2px 1px rgb(52, 52, 52);
 }
@@ -194,25 +194,25 @@
 	border-radius: 8px;
 }
 
-.ds {
+.ds{
 	text-align: right;
 	font-size: 21px;
 }
 
-.shah {
+.shah{
 	font-weight: 700;
 	font-size: 15px;
 }
 
-.pr {
+.pr{
 	font-size: 21px;
 }
 
-.mehir {
+.mehir{
 	font-size: 18px;
 }
 
-.iCart {
+.iCart{
 	position: static;
 	z-index: 9;
 	height: fit-content;
@@ -220,7 +220,7 @@
 
 
 
-.sideBar {
+.sideBar{
 	position: absolute;
 	display: flex;
 	flex-flow: column;
@@ -228,21 +228,21 @@
 	width: 400px;
 	min-height: 100%;
 	height: fit-content;
-	background-color: #140B0C;
+	background-color:#140B0C ;
 	right: 0;
-	z-index: 7;
+	z-index:7;
 }
 
-.overlay {
+.overlay{
 	position: absolute;
 	width: 100%;
 	height: 200%;
-	background-color: rgb(0, 0, 0, 0.5);
+	background-color: rgb(0,0,0,0.5);
 	right: 0;
 	z-index: 6;
 }
 
-.removeBtn {
+.removeBtn{
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
@@ -256,12 +256,12 @@
 	bottom: 7px;
 }
 
-.cartIcon:hover {
+.cartIcon:hover{
 	cursor: pointer;
-	filter: drop-shadow(1px 2px 3px wheat);
+	filter:drop-shadow(1px 2px 3px wheat);
 }
 
-.closeBtn {
+.closeBtn{
 	padding: 0;
 	cursor: pointer;
 	display: flex;
@@ -276,24 +276,24 @@
 
 }
 
-.itemSet {
-	margin: 30px 30px;
+.itemSet{
+	margin:30px 30px;
 }
 
-.payingBtn {
+.payingBtn{
 	cursor: pointer;
 	width: 300px;
 	height: 45px;
 	background-color: rgb(198, 89, 231);
 	margin: 10px auto;
-	border: none;
+	border:none;
 	border-radius: 8px;
 	color: aliceblue;
 	font-size: 22px;
 
 }
 
-.tashlum {
+.tashlum{
 	text-decoration: none;
 	display: flex;
 	flex-flow: row;
@@ -301,22 +301,14 @@
 	color: azure;
 	margin: 10px;
 }
-
-.payDetails {
+.payDetails{
 	display: flex;
-	flex-flow: column;
+	flex-flow: column ;
 	padding: 30px;
 }
-
-.sahakol {
-	font-size: 25px;
-}
-
-.search{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto 80px auto 0;
+	.sahakol{
+		font-size: 25px;
+	}
 
 	.search{
 		width: 100%;
@@ -362,28 +354,3 @@
 	}
 
 
-
-}
-
-
-.inp {
-	width: 260px;
-	height: 29px;
-	font-size: 20px;
-}
-
-
-.srchBtn{
-	height: 35px;
-	width: 65px;
-	margin: 5px;
-
-	font-size: medium;
-}
-
-.clearBtn{
-	width: 15px;
-	height: 15px;
-	position: relative;
-	right: 100px;
-}

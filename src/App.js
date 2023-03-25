@@ -75,7 +75,7 @@ function App() {
 		<div className="App">
 			{toCart()}
 			<div className='conteiner'>
-				<Header onCart={onCart} setSearchValue = {setSearchValue} serchValue={serchValue}/>
+				<Header onCart={onCart} />
 				<Banner />
 				<div className='infobar'>
 					<div className='productTitle'>{searchValue ? `${searchValue} חיפוש לפי ` : "כל המוצרים"}</div>
